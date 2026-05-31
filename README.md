@@ -1,4 +1,35 @@
-# Lab: Inheritance, Class Attributes, and Class Methods- Music Library System
+# Music Library Analytics System
+
+A robust Python-based system designed to manage song data and provide real-time library analytics. This system tracks unique artists, genre distribution, and total track counts automatically as new songs are added.
+
+## Features
+- **Automatic Registration**: Metadata is processed and indexed the moment a `Song` object is instantiated.
+- **Global Analytics**: Access library-wide statistics (Total Count, Unique Lists, and Frequency Distributions) directly from the `Song` class.
+- **Data Integrity**: Ensures unique entries for artist and genre lists to provide accurate reporting.
+
+## Usage Example
+
+```python
+from lib.song import Song
+
+# Create new songs
+Song("99 Problems", "Jay Z", "Rap")
+Song("Halo", "Beyonce", "Pop")
+
+# Access Class Analytics
+print(Song.get_count())          # Output: 2
+print(Song.get_genres())         # Output: ['Rap', 'Pop']
+print(Song.get_artist_count())   # Output: {'Jay Z': 1, 'Beyonce': 1}
+```
+
+## Technical Implementation
+The system leverages **Class Attributes** to maintain state across instances and **Class Methods** to ensure that data manipulation occurs at the registry level rather than just the object level.
+
+---
+
+## Lab Instructions (Original)
+
+### Lab: Inheritance, Class Attributes, and Class Methods- Music Library System
 
 Now that you’ve delved into creating class attributes and methods it is time to put these concepts to the test. In this lab our focus will be on a song class that will include several class attributes and methods.
 
@@ -142,5 +173,3 @@ Before you submit your solution, you need to save your progress with git.
 4. When you are ready to submit, click the ***Load Lab: Object Oriented Programming (OOP)- Part 1- Bookstore*** button in Canvas to launch CodeGrade.
   * Click on + Create Submission. Connect your repository for this lab.
   * For additional information on submitting assignments in CodeGrade: [Getting Started in Canvas](https://help.codegrade.com/for-students/getting-started/getting-started-in-canvas)
-
-
